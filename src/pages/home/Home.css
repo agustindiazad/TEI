@@ -1,4 +1,24 @@
 .Home-body {
-    background-color: #191919;
+    background-image: url('../../images/fondo.avif');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-attachment: fixed; /* Fija la imagen de fondo en su lugar */
+    background-position: center; /* Puedes ajustar esta posición según tus necesidades */
+    height: 100vh;
     padding: 15px 60px;
+    color: white;
+}
+
+.Pag {
+    margin: 60px 80px;
+    text-align: center;
+    border: 0.5px solid rgba(204, 204, 204, 0.57);
+    color: black;
+    backdrop-filter: blur(7.5px);
+    border-radius: 25px;
+
+}
+
+.Tit-1 {
+    margin: 0;
+    font-size: 120px;
 }
