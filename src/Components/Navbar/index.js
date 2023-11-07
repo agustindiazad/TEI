@@ -30,9 +30,7 @@ const Navbar = ({ toggle }) => {
                 <Nav scrollNav={scrollNav}>
                     <NavbarContainer>
                         <NavLogo to='/' onClick={toggleHome}>
-                            {/* <Logo2 src={require('../../../images/Logo.png')} alt='logo' /> */}
                             <Logo src={require('../../images/logo1.png')} alt='logo' />
-                            {/* <Logo src={require('../../../images/Logo-v3.png')} alt='logo' /> */}
                         </NavLogo>
                         <MobileIcon onClick={toggle}>
                             <FaBars />
@@ -60,7 +58,7 @@ const Navbar = ({ toggle }) => {
                                 <NavLinks to='' ></NavLinks>
                             </NavItem>
                             <NavItem>
-                                <a href='/viajes' style={{ textDecoration: 'none', color: '#fff', fontSize: '1rem', height: '100%', display: 'flex', alignItems: 'center' }}>Viajes</a>
+                                <a href='/registro' style={{ textDecoration: 'none', color: '#fff', fontSize: '1rem', height: '100%', display: 'flex', alignItems: 'center' }}>Registrate</a>
                                 {/* <NavLinks to='us' smooth={true} duration={1000} spy={true} exact='true' offset={-150}>¿Que hacemos?</NavLinks> */}
                             </NavItem>
                             <NavItem>
@@ -68,7 +66,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                            <NavBtinLink to='/registro'>¡Registrate!</NavBtinLink>
+                            <NavBtinLink to='/viajes'>¡Ver viajes!</NavBtinLink>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>

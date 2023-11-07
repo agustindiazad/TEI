@@ -57,7 +57,7 @@ export const Logo = styled.img`
 export const MobileIcon = styled.div`
     display: none;
     
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
         display: block;
         position: absolute;
         top: 0;
@@ -76,7 +76,7 @@ export const NavMenu = styled.ul`
     text-align: center;
     // margin-left: 10%;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
         display: none;
     }
 `;
@@ -117,7 +117,7 @@ export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
         display: none;
     }
 `;

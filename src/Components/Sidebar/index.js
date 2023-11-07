@@ -13,13 +13,17 @@ const Sidebar = ({ isOpen, toggle }) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <Link href='/pedidos' style={{ textDecoration: 'none', color: 'white' }}>Encuentra pedidos</Link>
-                    <SidebarLink>_________</SidebarLink>
-                    <Link href='http://www.prime3d.cl/' target='_blank' style={{ textDecoration: 'none', color: 'white' }}>Pagina principal</Link>
-                </SidebarMenu>
-                <SideBtnWrap>
+                    <Link href='/conductores' style={{ textDecoration: 'none', color: 'white' }}>Conductores</Link>
+                    <SidebarLink></SidebarLink>
+                    <Link href='/viajes' target='_blank' style={{ textDecoration: 'none', color: 'white' }}>Viajes</Link>
+                    <SidebarLink></SidebarLink>
+                    <Link href='/registrate' style={{ textDecoration: 'none', color: 'white' }}>Registrate</Link>
+                    <SidebarLink></SidebarLink>
+                    <SidebarLink></SidebarLink>
+                    <SideBtnWrap>
                     <SidebarRoute to='/test'>¡Conviertete en Printer!</SidebarRoute>
-                </SideBtnWrap>
+                    </SideBtnWrap>
+                </SidebarMenu>
             </SidebarWrapper>
         </SidebarContainer>
     )
