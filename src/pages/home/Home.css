@@ -3,7 +3,7 @@
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-attachment: fixed; /* Fija la imagen de fondo en su lugar */
     background-position: center; /* Puedes ajustar esta posición según tus necesidades */
-    height: 100vh;
+    height: auto;
     padding: 15px 60px;
     color: white;
 }
@@ -19,7 +19,25 @@
 }
 
 .Pag-2 {
+    padding: 50px 50px;
+}
 
+.Box-1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Box-1 h2 {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 0px 30px;
+    color: white;
+}
+
+.Sub-2 {
+    background-color: red;
 }
 
 .Bot-1 {
