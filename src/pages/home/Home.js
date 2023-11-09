@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Element, scroller } from 'react-scroll'; // Import Element and scroller from react-scroll
+import { Link } from 'react-scroll'; // Import Element and scroller from react-scroll
 import Navbar from '../../Components/Navbar/index';
 import Sidebar from '../../Components/Sidebar/index';
 import Footer from '../../Components/Footer/index';

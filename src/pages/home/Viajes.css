@@ -2,3 +2,55 @@
     background-color: #191919;
     padding: 15px 60px;
 }
+
+.Viajes-map {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Viajes-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    color: white;
+    margin-top: 50px;
+    padding: 15px 50px;
+}
+
+.Viajes-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.Mapa {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 70vh;
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.Viajes-inputs1 {
+    border: 0.5px solid rgba(204, 204, 204, 0.57);
+    color: white;
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Viajes-inputs2 {
+    border: 0.5px solid rgba(204, 204, 204, 0.57);
+    color: white;
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
