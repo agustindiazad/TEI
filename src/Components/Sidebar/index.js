@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                     <SidebarLink></SidebarLink>
                     <SidebarLink></SidebarLink>
                     <SideBtnWrap>
-                    <SidebarRoute to='/test'>¡Conviertete en Printer!</SidebarRoute>
+                    <SidebarRoute to='/rutas'>¡Mir las Rutas!</SidebarRoute>
                     </SideBtnWrap>
                 </SidebarMenu>
             </SidebarWrapper>

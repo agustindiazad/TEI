@@ -1,109 +1,56 @@
-import React, { useState } from 'react'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import geolib from 'geolib';
-import { Icon } from 'leaflet'
+import React, { useState} from 'react';
+import { useLocation } from 'react-router-dom';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet-routing-machine';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
-import Navbar from '../../Components/Navbar/index'
-import Sidebar from '../../Components/Sidebar/index'
-import Footer from '../../Components/Footer/index'
-import './Viajes.css'
+import Navbar from '../../Components/Navbar/index';
+import Sidebar from '../../Components/Sidebar/index';
+import Footer from '../../Components/Footer/index';
+import './Viajes.css';
+import Routing from '../../Components/Routing';
 
 function Viajes() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [inicioMarker, setInicioMarker] = useState({
-        lat: -33.45091110961121,
-        lng: -70.6511325854135,
-    });
+  const [isOpen, setIsOpen] = useState(false);
 
-    const [finMarker, setFinMarker] = useState({
-        lat: -33.45091110961121,
-        lng: -70.6511325854135,
-    });
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
-    const customIcon = new Icon({
-        iconUrl: "https://cdn-icons-png.flaticon.com/128/684/684908.png",
-        iconSize: [25, 25]
-    });
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const inicio = params.get('inicio');
+  const fin = params.get('fin');
+  const [inicioMarker] = useState(inicio ? inicio.split(',').map(parseFloat) : [0, 0]);
+  const [finMarker] = useState(fin ? fin.split(',').map(parseFloat) : [0, 0]);
+  const centerLat = (inicioMarker[0] + finMarker[0]) / 2;
+  const centerLng = (inicioMarker[1] + finMarker[1]) / 2;
 
-    const handleLatitudInicioChange = (event) => {
-        setInicioMarker({
-            ...inicioMarker,
-            lat: parseFloat(event.target.value) || 0,
-        });
-    }
-
-    const handleLongitudInicioChange = (event) => {
-        setInicioMarker({
-            ...inicioMarker,
-            lng: parseFloat(event.target.value) || 0,
-        });
-    }
-
-    const handleLatitudFinChange = (event) => {
-        setFinMarker({
-            ...finMarker,
-            lat: parseFloat(event.target.value) || 0,
-        });
-    }
-
-    const handleLongitudFinChange = (event) => {
-        setFinMarker({
-            ...finMarker,
-            lng: parseFloat(event.target.value) || 0,
-        });
-    }
-
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    }
-
-    return (
-        <div className="Viajes">
-            <div className="Viajes-body">
-                <Sidebar isOpen={isOpen} toggle={toggle} />
-                <Navbar toggle={toggle} />
-                <div className="Viajes-map">
-                    <MapContainer className='Mapa' center={[inicioMarker.lat, inicioMarker.lng]} zoom={12}>
-                        <TileLayer
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        /> 
-                        <Marker position={[inicioMarker.lat, inicioMarker.lng]} icon={customIcon}>
-                            <Popup>
-                                Punto de inicio
-                            </Popup>
-                        </Marker>
-
-                        <Marker position={[finMarker.lat, finMarker.lng]} icon={customIcon}>
-                            <Popup>
-                                Punto de destino
-                            </Popup>
-                        </Marker>
-                    </MapContainer>
-                    <div className="Viajes-text">
-                        <h1>¿Dónde quieres viajar?</h1>
-                        <div className="Viajes-total">
-                            <div className="Viajes-inputs1">
-                                <h2 className='Viajes-inicio'>Escribe tu latitud de inicio</h2>
-                                <input className='Viajes-input1' type="text" placeholder="Latitud inicio" onChange={handleLatitudInicioChange} value={inicioMarker.lat} />
-                                <h2 className='Viajes-fin'>Escribe tu longitud de inicio</h2>
-                                <input className='Viajes-input2' type="text" placeholder="Longitud inicio" onChange={handleLongitudInicioChange} value={inicioMarker.lng} />
-                            </div>
-                            <div className="Viajes-inputs2">
-                                <h2 className='Viajes-inicio'>Escribe tu latitud de fin</h2>
-                                <input className='Viajes-input1' type="text" placeholder="Latitud fin" onChange={handleLatitudFinChange} value={finMarker.lat} />
-                                <h2 className='Viajes-fin'>Escribe tu longitud de fin</h2>
-                                <input className='Viajes-input2' type="text" placeholder="Longitud fin" onChange={handleLongitudFinChange} value={finMarker.lng} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Footer />
+  return (
+    <div className="Viajes">
+      <div className="Viajes-body">
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
+        <div className="Viajes-map" style={{ height: 'calc(100vh - 100px)' }}>
+          <MapContainer center={[centerLat, centerLng]} zoom={13} style={{ 
+            height: '50%',
+            width: '50%',
+            position: 'absolute',
+           }}>
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Routing />
+          </MapContainer>
+          <div className="Viajes-info">
+            <p>Haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          </div>
         </div>
-    );
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Viajes;

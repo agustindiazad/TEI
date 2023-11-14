@@ -28,6 +28,8 @@ function Home() {
                         <h2 className='Sub-2'>Conductor</h2>
                         <h2 className='Sub-3'>Pasajero</h2>
                     </div>
+                    <div>
+                    </div>
                 </div>
             </div>
             <Footer />

@@ -1,0 +1,9 @@
+.Rutas-body {
+    padding: 15px 60px;
+}
+
+.Rutas-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}

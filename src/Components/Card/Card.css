@@ -1,0 +1,32 @@
+/* Card.css */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: auto;
+    display: flex; /* Agregar display flex para alinear elementos en el eje horizontal */
+    align-items: center; /* Centrar verticalmente los elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .card img {
+    max-width: 100px; /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 10px; /* Espacio entre la imagen y el título */
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin: 4px; /* Elimina el margen superior e inferior para el título */
+  }
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

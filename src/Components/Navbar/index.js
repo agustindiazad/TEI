@@ -37,13 +37,6 @@ const Navbar = ({ toggle }) => {
                         </MobileIcon>
                         <NavMenu>
                             <NavItem>
-                                <a href='/' style={{ textDecoration: 'none', color: '#fff', fontSize: '1rem', height: '100%', display: 'flex', alignItems: 'center' }}>Home</a>
-                                {/* <NavLinks to='us' smooth={true} duration={1000} spy={true} exact='true' offset={-150}>¿Que hacemos?</NavLinks> */}
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='' ></NavLinks>
-                            </NavItem>
-                            <NavItem>
                                 <a href='/conductores' style={{ textDecoration: 'none', color: '#fff', fontSize: '1rem', height: '100%', display: 'flex', alignItems: 'center' }}>Conductores</a>
                                 {/* <NavLinks to='us' smooth={true} duration={1000} spy={true} exact='true' offset={-150}>¿Que hacemos?</NavLinks> */}
                             </NavItem>
@@ -58,7 +51,7 @@ const Navbar = ({ toggle }) => {
                                 <NavLinks to='' ></NavLinks>
                             </NavItem>
                             <NavItem>
-                                <a href='/registro' style={{ textDecoration: 'none', color: '#fff', fontSize: '1rem', height: '100%', display: 'flex', alignItems: 'center' }}>Registrate</a>
+                                <a href='/registrate' style={{ textDecoration: 'none', color: '#fff', fontSize: '1rem', height: '100%', display: 'flex', alignItems: 'center' }}>Registrate</a>
                                 {/* <NavLinks to='us' smooth={true} duration={1000} spy={true} exact='true' offset={-150}>¿Que hacemos?</NavLinks> */}
                             </NavItem>
                             <NavItem>
@@ -66,7 +59,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                            <NavBtinLink to='/viajes'>¡Ver viajes!</NavBtinLink>
+                            <NavBtinLink to='/rutas'>¡Mira las rutas!</NavBtinLink>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>
