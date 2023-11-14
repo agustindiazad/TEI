@@ -6,6 +6,14 @@
 .Viajes-map {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 100px;
+    height: auto;
+}
+
+.Viajes-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
 }

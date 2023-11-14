@@ -8,7 +8,7 @@ L.Marker.prototype.options.icon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png"
 });
 
-export default function Routing() {
+const Routing = ({ setDistancia }) => {
   const map = useMap();
   const inicio = new URLSearchParams(window.location.search).get('inicio');
   const fin = new URLSearchParams(window.location.search).get('fin');
@@ -27,8 +27,24 @@ export default function Routing() {
     // Actualizar el enrutamiento cuando cambien las coordenadas de inicio o fin
     routingControl.setWaypoints([L.latLng(inicioMarker[0], inicioMarker[1]), L.latLng(finMarker[0], finMarker[1])]);
 
+    // Manejar el evento 'routesfound' para obtener y actualizar la distancia
+    routingControl.on('routesfound', function (e) {
+      const routes = e.routes;
+      let calculatedDistance = 0;
+
+      // Suma las distancias de todas las rutas encontradas
+      routes.forEach(function (route) {
+        calculatedDistance += route.summary.totalDistance;
+      });
+
+      // Actualiza la distancia utilizando la función pasada como prop
+      setDistancia(calculatedDistance);
+    });
+
     return () => map.removeControl(routingControl);
-  }, [map, inicioMarker, finMarker]);
+  }, [map, inicioMarker, finMarker, setDistancia]);
 
   return null;
-}
+};
+
+export default Routing;
