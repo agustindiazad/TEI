@@ -1,27 +1,25 @@
-/* Card.css */
-
 .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    background-color: #ccc;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
     width: auto;
-    display: flex; /* Agregar display flex para alinear elementos en el eje horizontal */
-    align-items: center; /* Centrar verticalmente los elementos */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    font-size: small;
   }
   
   .card img {
-    max-width: 100px; /* Tamaño de la imagen */
+    max-width: 100px;
     height: auto;
     border-radius: 8px;
-    margin-right: 10px; /* Espacio entre la imagen y el título */
+    margin-right: 10px;
   }
   
   .card h3 {
     font-size: 1.2rem;
-    margin: 4px; /* Elimina el margen superior e inferior para el título */
+    margin: 4px;
   }
 
 .card-content {
@@ -30,3 +28,15 @@
     align-items: center;
 }
 
+.card-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.card-info-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    align-items: center;
+}

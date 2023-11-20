@@ -12,7 +12,7 @@ import Routing from '../../Components/Routing';
 
 function Viajes() {
   const [isOpen, setIsOpen] = useState(false);
-  const [distancia, setDistancia] = useState(0); // Estado para almacenar la distancia
+  const [distancia, setDistancia] = useState(0);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -27,10 +27,17 @@ function Viajes() {
   const centerLat = (inicioMarker[0] + finMarker[0]) / 2;
   const centerLng = (inicioMarker[1] + finMarker[1]) / 2;
   const [precios] = useState({
-    tarifaBase: 500, // Ejemplo de tarifa base
-    tarifaKilometro: 250, // Ejemplo de tarifa por kilómetro
-    // Otros precios o tarifas que puedas tener
+    tarifaBase: 750,
+    tarifaKilometro: 200,
   });
+
+  const tarifaTope = 6500;
+
+  // Calcula el total sin superar el tope
+  const total = Math.min(
+    precios.tarifaBase + (distancia / 1000) * precios.tarifaKilometro,
+    tarifaTope
+  ).toFixed(2);
 
   return (
     <div className="Viajes">
@@ -48,16 +55,16 @@ function Viajes() {
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Routing setDistancia={setDistancia} /> {/* Pasa la función setDistancia al componente Routing */}
+            <Routing setDistancia={setDistancia} />
           </MapContainer>
         </div>
         <div className="Viajes-info">
           <h2>Precios</h2>
           <p>Tarifa Base: ${precios.tarifaBase}</p>
+          <p>Tarifa Tope: ${tarifaTope}</p>
           <p>Tarifa por Kilómetro: ${precios.tarifaKilometro}</p>
-          <p>Distancia: {(distancia / 1000).toFixed(2)} km</p> {/* Muestra la distancia en kilómetros */}
-          <p>Total: ${(precios.tarifaBase + (distancia / 1000) * precios.tarifaKilometro).toFixed(2)}</p> {/* Calcula el total */}
-          {/* Agrega más líneas según sea necesario para otros precios o tarifas */}
+          <p>Distancia: {(distancia / 1000).toFixed(2)} km</p>
+          <p>Total: ${total}</p>
         </div>
       </div>
       <Footer />

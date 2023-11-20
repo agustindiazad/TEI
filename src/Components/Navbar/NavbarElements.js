@@ -127,12 +127,12 @@ export const NavBtinLink = styled(LinkR)`
     min-width: 150px;
     max-width: 300px;
     border-radius: 50px;
-    background: #ffffff;
+    background: #191919;
     // margin-left: 70px;
     // margin-right: 25px;
     padding: 10px 22px; 
     white-sapce: nowrap;
-    color: #000000;
+    color: #ffffff;
     font-size: 19px;
     font-weight: bold;
     outline: none;
@@ -144,8 +144,8 @@ export const NavBtinLink = styled(LinkR)`
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: #fff;
-        color: #010606;
+        background: #ffffff;
+        color: #000000;
     }
 
     @media screen and (max-width: 1060px) {

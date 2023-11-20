@@ -1,4 +1,5 @@
 .Rutas-body {
+    background-color: #191919;
     padding: 15px 60px;
 }
 
@@ -6,4 +7,11 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+}
+
+.Rutas-card-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
 }

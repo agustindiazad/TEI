@@ -50,13 +50,6 @@ const Navbar = ({ toggle }) => {
                             <NavItem>
                                 <NavLinks to='' ></NavLinks>
                             </NavItem>
-                            <NavItem>
-                                <a href='/registrate' style={{ textDecoration: 'none', color: '#fff', fontSize: '1rem', height: '100%', display: 'flex', alignItems: 'center' }}>Registrate</a>
-                                {/* <NavLinks to='us' smooth={true} duration={1000} spy={true} exact='true' offset={-150}>¿Que hacemos?</NavLinks> */}
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='' ></NavLinks>
-                            </NavItem>
                         </NavMenu>
                         <NavBtn>
                             <NavBtinLink to='/rutas'>¡Mira las rutas!</NavBtinLink>

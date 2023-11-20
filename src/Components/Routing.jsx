@@ -29,6 +29,9 @@ const Routing = ({ setDistancia }) => {
 
     // Manejar el evento 'routesfound' para obtener y actualizar la distancia
     routingControl.on('routesfound', function (e) {
+      // Reinicia la distancia antes de calcular la nueva ruta
+      setDistancia(0);
+
       const routes = e.routes;
       let calculatedDistance = 0;
 

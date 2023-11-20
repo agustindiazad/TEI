@@ -35,9 +35,11 @@ function Rutas() {
                 <Navbar toggle={toggle} />
                 <div className="Rutas-card">
                     {robohashData.map((item, index) => (
-                    <Link to={`/viajes/${index}?inicio=${item.inicio}&fin=${item.fin}`} key={index}>
+                    <div className="Rutas-card-title">
+                    <Link style={{textDecoration: 'none', color: '#191919'}} to={`/viajes/${index}?inicio=${item.inicio}&fin=${item.fin}`} key={index}>
                         <Card title={item.name} image={item.url} inicio={item.inicio} fin={item.fin} />
                     </Link>
+                    </div>
                     ))}
                 </div>
             </div>

@@ -17,9 +17,6 @@ const Sidebar = ({ isOpen, toggle }) => {
                     <SidebarLink></SidebarLink>
                     <Link href='/viajes' target='_blank' style={{ textDecoration: 'none', color: 'white' }}>Viajes</Link>
                     <SidebarLink></SidebarLink>
-                    <Link href='/registrate' style={{ textDecoration: 'none', color: 'white' }}>Registrate</Link>
-                    <SidebarLink></SidebarLink>
-                    <SidebarLink></SidebarLink>
                     <SideBtnWrap>
                     <SidebarRoute to='/rutas'>¡Mir las Rutas!</SidebarRoute>
                     </SideBtnWrap>
