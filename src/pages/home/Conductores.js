@@ -14,6 +14,7 @@ function Conductores() {
     nombre: '',
     edad: '',
     nacionalidad: '',
+    comuna: '',
     inicioRuta: '',
     finRuta: '',
     imagenes: [],
@@ -42,7 +43,7 @@ function Conductores() {
         <Navbar toggle={toggle} />
 
         <div className="Conductores-form">
-          <h2>Regístrate</h2>
+          <h2>Regístrate como Conductor</h2>
           <form onSubmit={handleSubmit}>
             <label htmlFor="nombre">Nombre:</label>
             <input
@@ -68,6 +69,15 @@ function Conductores() {
               id="nacionalidad"
               name="nacionalidad"
               value={formData.nacionalidad}
+              onChange={handleChange}
+            />
+
+            <label htmlFor="comuna">Comuna de recidencia</label>
+            <input
+              type="text"
+              id="comuna"
+              name="comuna"
+              value={formData.comuna}
               onChange={handleChange}
             />
 

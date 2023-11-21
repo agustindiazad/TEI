@@ -14,8 +14,7 @@ function Pasajeros() {
     nombre: '',
     edad: '',
     nacionalidad: '',
-    inicioRuta: '',
-    finRuta: '',
+    comuna: '',
     imagenes: [],
   });
 
@@ -42,7 +41,7 @@ function Pasajeros() {
         <Navbar toggle={toggle} />
 
         <div className="Pasajeros-form">
-          <h2>Regístrate</h2>
+          <h2>Regístrate como Pasajero</h2>
           <form onSubmit={handleSubmit}>
             <label htmlFor="nombre">Nombre:</label>
             <input
@@ -68,6 +67,15 @@ function Pasajeros() {
               id="nacionalidad"
               name="nacionalidad"
               value={formData.nacionalidad}
+              onChange={handleChange}
+            />
+
+            <label htmlFor="comuna">Comuna de recidencia</label>
+            <input
+              type="text"
+              id="comuna"
+              name="comuna"
+              value={formData.comuna}
               onChange={handleChange}
             />
 
