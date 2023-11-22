@@ -99,7 +99,7 @@ function Conductores() {
               onChange={handleChange}
             />
 
-            <label htmlFor="imagenes">Subir imágenes:</label>
+            <label htmlFor="imagenes">Subir carnet por ambos lados:</label>
             <input
               type="file"
               id="imagenes"

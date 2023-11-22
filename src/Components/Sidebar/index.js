@@ -15,10 +15,10 @@ const Sidebar = ({ isOpen, toggle }) => {
                 <SidebarMenu>
                     <Link href='/conductores' style={{ textDecoration: 'none', color: 'white' }}>Conductores</Link>
                     <SidebarLink></SidebarLink>
-                    <Link href='/viajes' target='_blank' style={{ textDecoration: 'none', color: 'white' }}>Viajes</Link>
+                    <Link href='/pasajeros' style={{ textDecoration: 'none', color: 'white' }}>Pasajeros</Link>
                     <SidebarLink></SidebarLink>
                     <SideBtnWrap>
-                    <SidebarRoute to='/rutas'>¡Mir las Rutas!</SidebarRoute>
+                    <SidebarRoute to='/rutas'>¡Mira las Rutas!</SidebarRoute>
                     </SideBtnWrap>
                 </SidebarMenu>
             </SidebarWrapper>

@@ -1,21 +1,24 @@
 .Home-body {
     background-image: url('../../images/fondo.avif');
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-attachment: fixed; /* Fija la imagen de fondo en su lugar */
-    background-position: center; /* Puedes ajustar esta posición según tus necesidades */
-    height: auto;
-    padding: 15px 60px;
+    background-size: cover;
+    background-position: center;
     color: white;
 }
 
+.Pag-0 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Pag-1 {
-    margin-top: 180px;
-    padding: 50px 50px;
     text-align: center;
     border: 0.5px solid rgba(204, 204, 204, 0.57);
     color: black;
     backdrop-filter: blur(8px);
     border-radius: 25px;
+    padding: 50px 50px;
 }
 
 .Pag-2 {
@@ -24,20 +27,30 @@
 
 .Box-1 {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
 }
 
-.Box-1 h2 {
-    display: inline-block;
-    border-radius: 25px;
+.Box-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    max-width: 40%;
+    color: rgb(0, 0, 0);
     padding: 20px;
-    margin: 0px 30px;
-    color: white;
+    border-radius: 20px;
 }
 
-.Sub-2 {
-    background-color: red;
+.Box-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    max-width: 40%;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .Bot-1 {
@@ -53,4 +66,23 @@
     font-weight: bold;
     border: none;
     cursor: pointer;
+}
+
+.Box-2 p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.Box-3 p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.Box-3 img {
+    height: 350px;
+    margin-bottom: 10px;
+}
+.Box-2 img {
+    height: 350px;
+    margin-bottom: 10px;
 }
