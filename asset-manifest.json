@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/TEI/static/css/main.95808603.css",
+    "main.js": "/TEI/static/js/main.5f61bc1f.js",
+    "static/js/787.e7b59482.chunk.js": "/TEI/static/js/787.e7b59482.chunk.js",
+    "static/media/fondo.avif": "/TEI/static/media/fondo.bd994b26a413669f81fb.avif",
+    "static/media/logo1.png": "/TEI/static/media/logo1.3b277a17d4b91052e2d7.png",
+    "static/media/pasajero.png": "/TEI/static/media/pasajero.bb0aac0bddcb8ba57210.png",
+    "static/media/conductor.png": "/TEI/static/media/conductor.9ba54514b4710a00364c.png",
+    "index.html": "/TEI/index.html",
+    "main.95808603.css.map": "/TEI/static/css/main.95808603.css.map",
+    "main.5f61bc1f.js.map": "/TEI/static/js/main.5f61bc1f.js.map",
+    "787.e7b59482.chunk.js.map": "/TEI/static/js/787.e7b59482.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95808603.css",
+    "static/js/main.5f61bc1f.js"
+  ]
+}
